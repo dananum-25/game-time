@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>재도전 기회 확인</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7356591276029815"
+     crossorigin="anonymous"></script>
+  <style>
+:root{
+  --bg1:#050814; --bg2:#0b1a3b; --card:#0b1024cc;
+  --text:#eaf0ff; --muted:#a8b3d6; --accent:#5ee7ff; --gold:#f2c14e;
+  --danger:#ff6b6b; --ok:#38d996;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Pretendard,Segoe UI,Roboto,Apple Color Emoji,Segoe UI Emoji;}
+body{
+  background: radial-gradient(1200px 800px at 30% 20%, #1c2a7a55 0%, transparent 60%),
+              radial-gradient(900px 700px at 70% 30%, #7c2aa655 0%, transparent 60%),
+              linear-gradient(180deg,var(--bg2),var(--bg1));
+  color:var(--text);
+}
+.wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:22px;}
+.card{
+  width:min(520px, 94vw);
+  background: linear-gradient(180deg, #0b1026cc, #070a18cc);
+  border:1px solid #ffffff1a;
+  border-radius:24px;
+  box-shadow: 0 25px 60px #00000077;
+  padding:22px 18px 18px;
+}
+.h1{
+  display:flex;align-items:center;gap:10px;
+  font-size:20px;font-weight:800;letter-spacing:-.2px;
+}
+.sub{color:var(--muted);margin:6px 0 18px;font-size:14px;line-height:1.4;}
+.timer{
+  margin:14px 0 10px;
+  border-radius:20px;
+  padding:18px 14px;
+  border:2px solid #ffffff22;
+  background: radial-gradient(1200px 400px at 30% 20%, #5ee7ff22 0%, transparent 55%),
+              radial-gradient(1200px 400px at 70% 20%, #f2c14e22 0%, transparent 55%),
+              linear-gradient(180deg,#0a1030cc,#050818cc);
+  position:relative;
+}
+.timer:before{
+  content:"";
+  position:absolute;inset:-2px;
+  border-radius:22px;
+  padding:2px;
+  background: linear-gradient(90deg,#5ee7ff,#9a5bff,#f2c14e);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+}
+.digits{
+  font-variant-numeric: tabular-nums;
+  text-align:center;
+  font-size:64px;
+  font-weight:900;
+  letter-spacing:2px;
+  color:var(--accent);
+  text-shadow:0 8px 30px #000000aa;
+}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;color:var(--muted);font-size:13px;}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 10px;border-radius:999px;
+  background:#ffffff10;border:1px solid #ffffff1a;
+}
+.btnrow{display:flex;gap:12px;margin:14px 0 10px;}
+button, a.btn{
+  appearance:none;border:none;cursor:pointer;
+  width:100%;
+  padding:14px 14px;border-radius:16px;
+  font-size:16px;font-weight:800;
+  transition:transform .05s ease, filter .15s ease, opacity .15s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  text-decoration:none;
+}
+button:active, a.btn:active{transform:translateY(1px);}
+.primary{background:linear-gradient(90deg,#5ee7ff,#2aa8ff);color:#021225;}
+.stop{background:linear-gradient(90deg,#f2c14e,#c07a1b);color:#1b1205;}
+.ghost{background:#ffffff10;color:var(--text);border:1px solid #ffffff22;}
+.disabled{opacity:.45;pointer-events:none;}
+.hr{height:1px;background:#ffffff1a;margin:14px 0;}
+.note{color:var(--muted);font-size:13px;line-height:1.5;}
+.small{font-size:12px;color:var(--muted);}
+.form{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;
+}
+.form input{
+  width:100%;padding:12px 12px;border-radius:14px;
+  border:1px solid #ffffff22;background:#050818cc;color:var(--text);
+  outline:none;
+}
+.form input::placeholder{color:#9aa6cc;}
+.full{grid-column:1/-1;}
+.chk{display:flex;align-items:center;gap:10px;margin:10px 0;}
+.chk input{width:18px;height:18px;}
+.msg{
+  margin-top:10px;padding:12px 12px;border-radius:14px;
+  background:#ffffff10;border:1px solid #ffffff1a;
+}
+.msg.ok{border-color:#38d99655;}
+.msg.bad{border-color:#ff6b6b55;}
+.adslot{
+  margin-top:12px;
+  padding:14px;border-radius:18px;
+  border:1px dashed #ffffff2a;
+  background:#ffffff08;
+  text-align:center;color:var(--muted);font-size:14px;
+}
+
+  .center{text-align:center}
+  .big{font-size:18px;font-weight:900;}
+  .count{font-variant-numeric:tabular-nums;font-size:44px;font-weight:900;color:var(--accent);margin:10px 0;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="h1">🔎 재도전 기회 확인</div>
+    <div class="sub" id="subtitle">외부 페이지를 확인한 뒤 돌아오면 기회가 1회 추가됩니다.</div>
+
+    <div class="adslot">광고 영역 (애드센스 코드 삽입 가능)</div>
+
+    <div class="msg center" style="margin-top:14px;">
+      <div class="big">잠시 후 버튼이 활성화됩니다</div>
+      <div class="count" id="count">10</div>
+      <div class="small">자동화/연속 클릭 방지를 위한 대기시간입니다.</div>
+    </div>
+
+    <div class="btnrow" style="margin-top:14px;">
+      <button id="btnBack" class="primary disabled">게임으로 돌아가서 재도전 +1</button>
+    </div>
+
+    <div class="btnrow" style="margin-top:10px;">
+      <a class="btn ghost" id="btnOpenOut" href="#">외부 페이지로 이동</a>
+    </div>
+
+    <div class="note" style="margin-top:10px;">
+      선착순으로 진행되며 준비된 커피쿠폰 조기 소진시 공지없이 종료 될 수 있습니다.<br/>
+      행사상품 소진 시 공지 없이 조기 종료 될 수 있습니다.
+    </div>
+  </div>
+</div>
+
+<script>
+
+const params = new URLSearchParams(location.search);
+const kind = params.get("kind") || "share";
+const returnUrl = params.get("return") || (location.origin + "/index.html");
+
+const SHARE_URL = "https://my-fortune.streamlit.app/";
+const AD_URL = "https://incredible-dusk-20d2b5.netlify.app/";
+
+const subtitle = document.getElementById("subtitle");
+subtitle.textContent = kind === "share"
+  ? "친구에게 공유한 뒤 돌아오면 기회가 1회 추가됩니다."
+  : "광고/랜딩을 확인한 뒤 돌아오면 기회가 1회 추가됩니다.";
+
+const outUrl = kind === "share" ? SHARE_URL : AD_URL;
+
+const hint = document.getElementById("hint");
+if(hint){
+  hint.innerHTML = (kind === "share")
+    ? `<b>카카오톡 공유</b>: 버튼을 누르면 링크 공유 화면이 뜹니다. <b>카카오톡</b> → 친구 선택 → 전송.<br/>
+       게임이 실행이 안 되면 <b>우측 아래 점 3개</b> → <b>다른 브라우저로 열기</b>로 시도해보세요.`
+    : `광고/랜딩을 확인한 뒤 돌아오면 기회가 추가됩니다.`;
+}
+
+async function tryShare(url){
+  if(!navigator.share) return false;
+  try {
+    await navigator.share({
+      title: "20.26 챌린지 미니게임",
+      text: "20.26초 맞추고 커피쿠폰 도전!",
+      url
+    });
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+
+async function copyText(t){
+  try {
+    await navigator.clipboard.writeText(t);
+    return true;
+  } catch(e) {
+    const ta = document.createElement("textarea");
+    ta.value = t;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try {
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch(err) {
+      document.body.removeChild(ta);
+      return false;
+    }
+  }
+}
+
+document.getElementById("btnOpenOut").addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  if(kind === "share") {
+    const ok = await tryShare(outUrl);
+    if(!ok) {
+      // Fallback: copy link + open it
+      await copyText(outUrl);
+      try { window.open(outUrl, "_blank", "noopener,noreferrer"); } catch(err){}
+      alert("공유가 지원되지 않아 링크를 복사했습니다. 카카오톡/메신저에 붙여넣어 공유해 주세요.");
+    }
+    return;
+  }
+
+  // ad
+  try { window.open(outUrl, "_blank", "noopener,noreferrer"); } catch(err){}
+});
+
+// countdown + grant
+const el = document.getElementById("sec");
+const btn = document.getElementById("btnReturn");
+let n = 3;
+el.textContent = String(n);
+btn.classList.add("disabled");
+const timer = setInterval(() => {
+  n -= 1;
+  el.textContent = String(n);
+  if(n <= 0) {
+    clearInterval(timer);
+    el.textContent = "0";
+    btn.classList.remove("disabled");
+  }
+}, 1000);
+
+btn.addEventListener("click", () => {
+  if(btn.classList.contains("disabled")) return;
+  const grant = kind + "-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+  const sep = returnUrl.includes("?") ? "&" : "?";
+  location.href = returnUrl + sep + "grant=" + encodeURIComponent(grant);
+});
+
+</script>
+</body>
+</html>
