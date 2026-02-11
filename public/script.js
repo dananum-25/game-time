@@ -19,8 +19,7 @@ const tickAudio = new Audio('clock-ticking.mp3');
 tickAudio.loop = true;
 const winAudio = new Audio('reveal.mp3');
 
-const AD_URL = 'https://dananum-landing.vercel.app/
-랜딩페이지';
+const AD_URL = 'https://dananum-landing.vercel.app/';
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbzqvExf3oVzLK578Rv_AUN3YTzlo90x6gl0VAS8J7exjbapf--4ODxQn_Ovxrr9rKfG/exec';
 
 // 테스트 모드: ?test=1, 기록초 지정: ?record=20.268
