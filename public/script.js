@@ -19,7 +19,8 @@ const tickAudio = new Audio('clock-ticking.mp3');
 tickAudio.loop = true;
 const winAudio = new Audio('reveal.mp3');
 
-const AD_URL = 'https://capable-kataifi-46f1ad.netlify.app/';
+const AD_URL = 'https://dananum-landing.vercel.app/
+랜딩페이지';
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbzqvExf3oVzLK578Rv_AUN3YTzlo90x6gl0VAS8J7exjbapf--4ODxQn_Ovxrr9rKfG/exec';
 
 // 테스트 모드: ?test=1, 기록초 지정: ?record=20.268
@@ -77,7 +78,7 @@ document.getElementById('stopBtn').onclick = () => {
 };
 
 document.getElementById('shareBtn').onclick = async () => {
-  const url = 'https://my-fortune.streamlit.app/';
+  const url = 'https://my-fortune-lake.vercel.app?invite=';
   try {
     if (navigator.share) {
       await navigator.share({ title: '20.26 챌린지', url });
